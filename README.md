@@ -1,5 +1,7 @@
 # MIT-6.036
 
+Authot: YungYu Chen (Michelle)
+
 The W7 Neural Networks II file uses the supporting codes from the MIT 6.036 to build up the Neural Network:
 
 The modules include: 
