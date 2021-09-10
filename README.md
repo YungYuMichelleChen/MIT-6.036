@@ -30,5 +30,5 @@ The modules include:
                - Pick random set of X & Y
                - Generate Ypred through self.forward
                - dLoss: dL/dA through loss modules.backward()
-               - Backprop: self.backward(dLoss) - only Linear Modules have sgd_step function to update weights
+               - Backprop: self.backward(dLoss) - only Linear Modules have sgd_step function to update weights, otherwise update will be passed.
                - self.sgd_step(lrate): update weights
