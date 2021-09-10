@@ -19,3 +19,16 @@ The modules include:
 3. Loss Modules:
     -  Forward: Determine the loss between Ypred and Y
     -  Backward: Provide the backward calculation (i.e. dLdA)
+
+4. Neural Network Implementation:
+    -  Class: Sequential
+    -  Forward: Compute Ypred
+    -  Backward: reversed list of modules (with recursion, i.e. delta = func(delta))
+                 # Update dLdW and dLdW0
+    -  sgd_step: Gradient descent step. Input - learning rate
+    -  sgd***: Train the model.
+               - Pick random set of X & Y
+               - Generate Ypred through self.forward
+               - dLoss: dL/dA through loss modules.backward()
+               - Backprop: self.backward(dLoss) - only Linear Modules have sgd_step function to update weights
+               - self.sgd_step(lrate): update weights
