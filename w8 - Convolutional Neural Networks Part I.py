@@ -98,7 +98,7 @@ class Sequential:
                 if num_updates >= iters: break
 
                 # Implement the main part of mini_gd here
-                # Your code
+                # Your code below
                 Xt = X[:, K*j:K*(j+1)]
                 Yt = Y[:, K*j:K*(j+1)]
                 Ypred = self.forward(Xt)
